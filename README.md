@@ -54,23 +54,23 @@ Also, in the same directory with `main_limbss.py`, a new txt file will be genera
 
 # Code Structure (LOC & Tree)
 ```
-limbss ()
+limbss (86)                        # Calculates single scattering at the limb
      |
-     +-refine_rgrid (35) # Constructs refined grid of radii, r, with equidistant subdivision of optical layers and returns layer-membership mask.
+     +-refine_rgrid (35)           # Constructs refined grid of radii, r, with equidistant subdivision of optical layers and returns layer-membership mask.
      |
-     +-getix (14)        #  Returns indices ixlo, ixhi of an interval x[ixlo]:x[ixhi] containing x0.
+     +-getix (14)                  # Returns indices ixlo, ixhi of an interval x[ixlo]:x[ixhi] containing x0.
      |
-     +-xy_los_shell (24) # Returns corrdinates of points where LOS intersects with the shells
+     +-xy_los_shell (24)           # Returns corrdinates of points where LOS intersects with the shells
      |            |
      |            +-getix
      |
-     +-xyz_sol_shell () # Compute the intersection of a solar beam with a sphere
+     +-xyz_sol_shell (35)          # Compute the intersection of a solar beam with a sphere
      |
-     +-tau_segment ()
+     +-tau_segment (20)            # Analytically calculates optical thickness of a segment asuming ext = a + b*r
      |           |
-     |           +-antideriv ()
+     |           +-antideriv (11)  # Computes integral{r(s) ds}, a.k.a. antiderivative of r(s), in closed form
      |
-     +-simpson ()
+     +-simpson (Python function)
 ```
-LOC =
+LOC = 86 + 35 + 14 + 24 + 35 + 20 + 11 = 225
 -EOF
