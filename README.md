@@ -56,21 +56,21 @@ Also, in the same directory with `main_limbss.py`, a new txt file will be genera
 ```
 limbss ()
      |
-     +-refine_rgrid ()
+     +-refine_rgrid (35) # Constructs refined grid of radii, r, with equidistant subdivision of optical layers and returns layer-membership mask.
      |
-     +-getix ()
+     +-getix (14)        #  Returns indices ixlo, ixhi of an interval x[ixlo]:x[ixhi] containing x0.
      |
-     +-xy_los_shell ()
+     +-xy_los_shell (24) # Returns corrdinates of points where LOS intersects with the shells
      |            |
-     |            +-getix ()
+     |            +-getix
      |
-     +-xyz_sol_shell ()
+     +-xyz_sol_shell () # Compute the intersection of a solar beam with a sphere
      |
      +-tau_segment ()
      |           |
      |           +-antideriv ()
      |
      +-simpson ()
-
-LOC =
 ```
+LOC =
+-EOF
