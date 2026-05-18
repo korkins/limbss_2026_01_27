@@ -4,13 +4,13 @@ This repository contains a Python prototype of an RT code simulating single scat
 Optical parameteres of shells, constituing the atmosphere, change along the radius, `r` (km). Extinction and scattering coefficients change along `r`lenearly: `ext = a + b * r`, where `a` and `b` are constant within each shell (optical layer). The code was tested vs. all pure and absorbing Rayleigh scenarious from Zawada et al., *Systematic comparison of vectorial spherical radiative transfer models in limb scattering geometry*, Atmos. Meas. Tech., 14, 3953–3972, 2021 (doi: https://doi.org/10.5194/amt-14-3953-2021). Note, the paper also ignores the twilight condition. 
 
 # Instructions
-1. The GitHub repository (asumed cloned to local machine) contains 9 py-sources and 2 folders. The `tests` folder is discussed below, at step #6. The `ort_limb_benchmarks` folder contains input for the benchmarks (the word 'input' should have been added to the folder name...). This data was extracted from Zawada’s 'NetCDF' file and placed into 'txt' files for a) convenience – one does not have to read their NetCDF, and b) better data visibility – i.e., the sequence of the solar geometry in their NetCDF differs from that published in the paper.
+1. The GitHub repository (asumed cloned to local machine) contains 9 py-sources and 2 folders. The `tests` folder is discussed below, at step #6. The `ort_limb_benchmarks` folder contains input for the benchmarks (the word 'input' should have been added to the folder name...). This data was extracted from Zawada’s NetCDF file and placed into respective txt files for a) convenience – one does not have to read their NetCDF, and b) better data visibility – i.e., the sequence of the solar geometry in their NetCDF differs from that published in the paper.
 
-2. In `main_limbss.py`, line 29, `path_bmrk = "./ort_limb_benchmarks/"` – this relative path should work as is, but if not, update as necessary.
+2. In `main_limbss.py`, line 29, `path_bmrk = "./ort_limb_benchmarks/"` – this relative path should work as is, otherwise update as necessary.
 
 3. Also, in the `main_limbss.py`:
--Line 13: `npnts_int = 1` – number of internal (auxiliary) shells in between the main shells; `npnts_int = 0, 1, 2` were tried;  
--Lines 16-22: 0-offset indices. Only `isolar`, `iwavelength`, and `icomposition` have effect to select different solar geometry, wavelength, and pure Rayleigh or Rayleigh + ozone case. Other indices are used only to create a unique output file name (see below) and quickly locate corresponding data in the NetCDF benchmark file.
+*Line 13: `npnts_int = 1` – number of internal (auxiliary) shells in between the main shells; `npnts_int = 0, 1, 2` were tried;  
+*Lines 16-22: 0-offset indices. Only `isolar`, `iwavelength`, and `icomposition` have effect to select different solar geometry, wavelength, and pure Rayleigh or Rayleigh + ozone case. Other indices are used only to create a unique output file name (see below) and quickly locate corresponding data in the NetCDF benchmark file.
 
 4. Line 24: `itp_plot = 30` - 0-offset index corresponding to tangent height at which solution will be printed on screen (1 point; all points go to a txt file when finished). Due to Zawada’s input, its value is close to the actual tangent height, i.e. index 30 corresponds to 30.5 km
 
