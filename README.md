@@ -57,7 +57,7 @@ In the same directory with `main_limbss.py`, a new txt file will be generated: `
 
 # Code Structure (LOC & Tree)
 ```
-limbss (86)                        # Calculates single scattering at the limb
+limbss (86)                        # Main function calculating single scattering at the limb
      |
      +-refine_rgrid (35)           # Constructs refined grid of radii, r, with equidistant subdivision of optical layers and returns layer-membership mask.
      |
