@@ -9,10 +9,10 @@ Optical parameteres of shells, constituing the atmosphere, change along the radi
 2. In `main_limbss.py`, line 29, `path_bmrk = "./ort_limb_benchmarks/"` – this relative path should work as is, otherwise update as necessary.
 
 3. Also, in the `main_limbss.py`:  
--Line 13: `npnts_int = 1` – number of internal (auxiliary) shells in between the main shells; `npnts_int = 0, 1, 2` were tried;  
--Lines 16-22: 0-offset indices. Only `isolar`, `iwavelength`, and `icomposition` have effect to select different solar geometry, wavelength, and pure Rayleigh or Rayleigh + ozone case. Other indices are used only to create a unique output file name (see below) and quickly locate corresponding data in the NetCDF benchmark file.
+3.1 Line 13: `npnts_int = 1` – number of internal (auxiliary) shells in between the main shells; `npnts_int = 0, 1, 2` were tried;  
+3.2 Lines 16-22: 0-offset indices. Only `isolar`, `iwavelength`, and `icomposition` have effect to select different solar geometry, wavelength, and pure Rayleigh or Rayleigh + ozone case. Other indices are used only to create a unique output file name (see below) and quickly locate corresponding data in the NetCDF benchmark file.
 
-4. Line 24: `itp_plot = 30` - 0-offset index corresponding to tangent height at which solution will be printed on screen (1 point; all points go to a txt file when finished). Due to Zawada’s input, its value is close to the actual tangent height, i.e. index 30 corresponds to 30.5 km
+4. Line 24: `itp_plot = 30` - 0-offset index corresponding to tangent height at which solution will be printed on screen (for 1 point; all points go to a 'txt' file when finished). Due to Zawada’s input, its value is close to the actual tangent height, i.e. index 30 corresponds to 30.5 km
 
 5. By default, one should get the following on the screen (almost immediately):
 ```
