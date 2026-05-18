@@ -75,5 +75,5 @@ limbss (86)                        # Main function calculating single scattering
      |
      +-simpson (Python function)
 ```
-LOC = 86 + 35 + 14 + 24 + 35 + 20 + 11 = 225
--EOF
+LOC = 86 + 35 + 14 + 24 + 35 + 20 + 11 = 225  
+-EOF-
