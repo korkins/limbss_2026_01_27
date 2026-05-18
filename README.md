@@ -53,3 +53,22 @@ Also, in the same directory with `main_limbss.py`, a new txt file will be genera
 9. Lastly, for histograms (all non-aerosol SS tests, slide 18 in the 'doc' presentation), a separate main py file was created (not provided for simplicity).
 
 # Code Structure (LOC & Tree)
+limbss ()
+     |
+     +-refine_rgrid ()
+     |
+     +-getix ()
+     |
+     +-xy_los_shell ()
+     |            |
+     |            +-getix ()
+     |
+     +-xyz_sol_shell ()
+     |
+     +-tau_segment ()
+     |           |
+     |           +-antideriv ()
+     |
+     +-simpson ()
+
+LOC = 
