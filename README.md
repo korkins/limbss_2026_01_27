@@ -50,5 +50,6 @@ Also, in the same directory with `main_limbss.py`, a new txt file will be genera
 
 8. Yet another thing that I have tested is how the source function (includes attention of the solar beam), and transmittances Tsol = exp(-tau_sol) and Tlos = exp(-tau_los) look like as a function of ‘s’ – location on the LOS (s = 0 is the tangent point, s > 0 – towards the sensor). Currently, limbss(…) returns these values (lines 105-106) for testing. In the final code we may or may not keep these. My slide 15 shows the figures for the default setup in main_limbss.py. Note the images are not saved as files, but displayed in my python IDE (I use Spyder). If you don’t use separate IDE, in line 156, replace plt.show() with plt.savefig(fname_Iss+“.jpg", dpi=300, bbox_inches="tight") to save it as image into a file with the same name as the txt (fname_Iss is defined in the code).
 
+9. Lastly, for histograms (all non-aerosol SS tests, slide 18 in the 'doc' presentation), a separate main py file was created (not provided for simplicity).
 
 # Code Structure (LOC & Tree)
